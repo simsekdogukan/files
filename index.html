@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dosya Deposu</title>
+    <title>Doğukan Şimşek</title>
     <style>
         * {
             margin: 0;
@@ -112,9 +112,9 @@
 
 <body>
     <div class="container">
-        <h1>Dosya Deposu</h1>
+        <h1>Files</h1>
         <div class="file-list" id="fileList">
-            <div class="loading">Yükleniyor...</div>
+            <div class="loading">Loading...</div>
         </div>
     </div>
 
@@ -146,7 +146,7 @@
                 const container = document.getElementById('fileList');
 
                 if (files.length === 0) {
-                    container.innerHTML = '<div class="empty">Henüz dosya yok</div>';
+                    container.innerHTML = '<div class="empty">No files yet</div>';
                     return;
                 }
 
@@ -157,13 +157,13 @@
                             <div class="file-size">${formatSize(file.size)}</div>
                         </div>
                         <button class="download-btn" onclick="window.open('${file.download_url}', '_blank')">
-                            İndir
+                            Download
                         </button>
                     </div>
                 `).join('');
 
             } catch (error) {
-                document.getElementById('fileList').innerHTML = '<div class="empty">Yüklenemedi</div>';
+                document.getElementById('fileList').innerHTML = '<div class="empty">Failed to load</div>';
             }
         }
 
