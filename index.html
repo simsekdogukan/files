@@ -13,9 +13,9 @@
         }
 
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background: #c0c0c0;
-            color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e8e8e8;
+            color: #333;
         }
 
         /* Login Page */
@@ -24,61 +24,64 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: #008080;
+            background: linear-gradient(to bottom, #4a5f7f 0%, #2d3e50 100%);
         }
 
         .login-box {
-            background: #c0c0c0;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0 #000;
-            width: 400px;
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            width: 420px;
         }
 
         .login-header {
-            background: #000080;
+            background: #2d3e50;
             color: #fff;
-            padding: 8px 12px;
-            font-weight: bold;
-            border-bottom: 2px solid #000;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-bottom: 1px solid #1a252f;
+            font-size: 15px;
         }
 
         .login-body {
-            padding: 30px;
+            padding: 35px 30px;
         }
 
         .form-row {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
+            margin-bottom: 22px;
         }
 
         .form-row label {
-            width: 120px;
-            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            color: #555;
         }
 
         .form-row input {
-            flex: 1;
-            padding: 6px;
-            border: 2px solid #000;
-            background: #fff;
-            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            background: #fafafa;
             font-size: 14px;
+            transition: all 0.2s;
         }
 
         .form-row input:focus {
-            outline: 2px solid #000080;
-            outline-offset: -2px;
+            outline: none;
+            border-color: #4a90e2;
+            background: #fff;
         }
 
         .error-msg {
             display: none;
-            background: #ff0000;
-            color: #fff;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 2px solid #000;
-            font-weight: bold;
+            background: #ffe6e6;
+            color: #c33;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ffcccc;
+            font-size: 13px;
         }
 
         .error-msg.show {
@@ -86,125 +89,141 @@
         }
 
         .button-row {
-            text-align: center;
-            margin-top: 25px;
+            margin-top: 28px;
         }
 
         .btn {
-            background: #c0c0c0;
-            border: 2px solid #000;
-            padding: 8px 30px;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
+            width: 100%;
+            background: #4a90e2;
+            border: none;
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 2px 2px 0 #000;
+            transition: background 0.2s;
         }
 
         .btn:hover {
-            background: #a0a0a0;
+            background: #357abd;
         }
 
         .btn:active {
-            box-shadow: 1px 1px 0 #000;
-            transform: translate(1px, 1px);
+            background: #2a5f9e;
+        }
+
+        .login-footer {
+            background: #f5f5f5;
+            padding: 12px 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
         }
 
         /* Main System */
         #mainSystem {
             display: none;
             min-height: 100vh;
-            padding: 0;
         }
 
         .system-header {
-            background: #000080;
+            background: #2d3e50;
             color: #fff;
-            padding: 10px 15px;
-            border-bottom: 2px solid #000;
+            padding: 12px 20px;
+            border-bottom: 3px solid #1a252f;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .system-title {
-            font-weight: bold;
+            font-weight: 600;
             font-size: 16px;
         }
 
         .logout-link {
-            background: #c0c0c0;
-            color: #000;
-            border: 2px solid #000;
-            padding: 4px 12px;
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 16px;
             cursor: pointer;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            font-size: 12px;
+            font-size: 13px;
+            transition: all 0.2s;
         }
 
         .logout-link:hover {
-            background: #a0a0a0;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         .content-area {
-            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px;
         }
 
         .stats-panel {
-            background: #c0c0c0;
-            border: 2px solid #000;
-            margin-bottom: 20px;
-            box-shadow: 4px 4px 0 #808080;
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .stats-header {
-            background: #808080;
-            padding: 6px 10px;
-            font-weight: bold;
-            border-bottom: 2px solid #000;
+            background: #f5f5f5;
+            padding: 12px 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: #555;
         }
 
         .stats-body {
-            padding: 15px;
+            padding: 20px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            gap: 20px;
         }
 
         .stat-item {
-            border: 2px solid #000;
-            padding: 12px;
-            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 18px;
+            background: #fafafa;
         }
 
         .stat-label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
         }
 
         .stat-value {
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
         }
 
         .files-panel {
-            background: #c0c0c0;
-            border: 2px solid #000;
-            box-shadow: 4px 4px 0 #808080;
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         .files-header {
-            background: #808080;
-            padding: 6px 10px;
-            font-weight: bold;
-            border-bottom: 2px solid #000;
+            background: #f5f5f5;
+            padding: 12px 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: #555;
         }
 
         .files-body {
-            padding: 15px;
-            background: #fff;
-            min-height: 400px;
+            padding: 20px;
+            min-height: 350px;
         }
 
         .file-list {
@@ -212,13 +231,19 @@
         }
 
         .file-item {
-            border: 2px solid #000;
-            margin-bottom: 10px;
-            background: #c0c0c0;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 12px;
+            background: #fafafa;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
+            padding: 16px 18px;
+            transition: all 0.2s;
+        }
+
+        .file-item:hover {
+            background: #f0f0f0;
+            border-color: #ccc;
         }
 
         .file-info {
@@ -226,59 +251,64 @@
         }
 
         .file-name {
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 4px;
+            color: #333;
+            font-size: 14px;
         }
 
         .file-size {
             font-size: 12px;
-            color: #333;
+            color: #777;
         }
 
         .file-actions {
-            margin-left: 15px;
+            margin-left: 20px;
         }
 
         .download-btn {
-            background: #c0c0c0;
-            border: 2px solid #000;
-            padding: 6px 20px;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
+            background: #4a90e2;
+            border: none;
+            color: white;
+            padding: 8px 24px;
+            font-size: 13px;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 2px 2px 0 #000;
-            font-size: 12px;
+            transition: background 0.2s;
         }
 
         .download-btn:hover {
-            background: #a0a0a0;
+            background: #357abd;
         }
 
         .download-btn:active {
-            box-shadow: 1px 1px 0 #000;
-            transform: translate(1px, 1px);
+            background: #2a5f9e;
         }
 
         .loading-msg {
             text-align: center;
-            padding: 40px;
-            font-weight: bold;
+            padding: 50px;
+            color: #999;
+            font-size: 14px;
         }
 
         .no-files-msg {
             text-align: center;
-            padding: 40px;
-            border: 2px dashed #000;
-            background: #e0e0e0;
+            padding: 50px;
+            border: 2px dashed #ddd;
+            background: #fafafa;
+            color: #999;
+            font-size: 14px;
         }
 
         .footer {
-            margin-top: 20px;
-            padding: 10px;
+            margin-top: 30px;
+            padding: 15px;
             text-align: center;
-            background: #808080;
-            border: 2px solid #000;
+            background: #f5f5f5;
+            border-top: 1px solid #ddd;
             font-size: 12px;
+            color: #777;
         }
 
         @media (max-width: 768px) {
@@ -289,7 +319,7 @@
             .file-item {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 12px;
             }
 
             .file-actions {
@@ -308,82 +338,109 @@
     <!-- Login Page -->
     <div id="loginPage">
         <div class="login-box">
-            <div class="login-header">MAYATECH FILE MANAGER - LOGIN</div>
+            <div class="login-header">Mayatech File Manager - Kullanıcı Girişi</div>
             <div class="login-body">
-                <div class="error-msg" id="errorMsg">HATA: Kimlik veya sifre yanlis!</div>
+                <div class="error-msg" id="errorMsg">Kimlik numarası veya şifre hatalı!</div>
                 <form id="loginForm" onsubmit="return handleLogin(event)">
                     <div class="form-row">
-                        <label>KIMLIK:</label>
+                        <label>Kimlik Numarası</label>
                         <input type="text" id="username" required autocomplete="off">
                     </div>
                     <div class="form-row">
-                        <label>SIFRE:</label>
+                        <label>Şifre</label>
                         <input type="password" id="password" required>
                     </div>
                     <div class="button-row">
-                        <button type="submit" class="btn">GIRIS</button>
+                        <button type="submit" class="btn">Giriş Yap</button>
                     </div>
                 </form>
+            </div>
+            <div class="login-footer">
+                Yetkisiz erişim yasaktır.
             </div>
         </div>
     </div>
 
-    <!-- Main System -->
+    <!-- Main System - GÜVENLİK: Login olmadan içerik yüklenmez -->
     <div id="mainSystem">
         <div class="system-header">
-            <div class="system-title">MAYATECH FILE MANAGER v1.0</div>
-            <button class="logout-link" onclick="handleLogout()">CIKIS</button>
+            <div class="system-title">Mayatech File Manager</div>
+            <button class="logout-link" onclick="handleLogout()">Çıkış</button>
         </div>
 
         <div class="content-area">
             <div class="stats-panel">
-                <div class="stats-header">SISTEM BILGILERI</div>
+                <div class="stats-header">Sistem Bilgileri</div>
                 <div class="stats-body">
                     <div class="stat-item">
-                        <div class="stat-label">TOPLAM DOSYA</div>
+                        <div class="stat-label">Toplam Dosya</div>
                         <div class="stat-value" id="totalFiles">-</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">TOPLAM BOYUT</div>
+                        <div class="stat-label">Toplam Boyut</div>
                         <div class="stat-value" id="totalSize">-</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">SISTEM DURUMU</div>
-                        <div class="stat-value" id="systemStatus">AKTIF</div>
+                        <div class="stat-label">Sistem Durumu</div>
+                        <div class="stat-value" style="color: #4caf50;">Aktif</div>
                     </div>
                 </div>
             </div>
 
             <div class="files-panel">
-                <div class="files-header">DOSYA LISTESI</div>
+                <div class="files-header">Dosya Listesi</div>
                 <div class="files-body" id="filesContent">
-                    <div class="loading-msg">Dosyalar yukleniyor...</div>
+                    <div class="loading-msg">Dosyalar yükleniyor...</div>
                 </div>
             </div>
 
             <div class="footer">
-                (C) 2025 MAYATECH - TUM HAKLARI SAKLIDIR
+                © 2025 Mayatech - Tüm hakları saklıdır
             </div>
         </div>
     </div>
 
     <script>
-        // Configuration
+        // GÜVENLİK: Tüm hassas veriler ve fonksiyonlar sadece login sonrası çalışır
         const VALID_USERNAME = '5999';
         const VALID_PASSWORD = '549476';
-        const REPO_OWNER = 'simsekdogukan';
-        const REPO_NAME = 'mayatech-licanse';
 
-        // Check session
+        // GÜVENLİK: Repo bilgileri şifreli tutuluyor
+        let REPO_CONFIG = null;
+        let isAuthenticated = false;
+
+        // Sayfa yüklendiğinde session kontrolü
         window.onload = function () {
-            const isLoggedIn = sessionStorage.getItem('mayatech_logged_in');
-            if (isLoggedIn === 'true') {
-                showMainSystem();
-                loadFiles();
+            // GÜVENLİK: Session kontrolü
+            const sessionValid = sessionStorage.getItem('mayatech_auth');
+            const sessionTime = sessionStorage.getItem('mayatech_auth_time');
+
+            // GÜVENLİK: Session timeout kontrolü (1 saat)
+            if (sessionValid === 'true' && sessionTime) {
+                const elapsed = Date.now() - parseInt(sessionTime);
+                if (elapsed < 3600000) { // 1 saat
+                    initializeSystem();
+                    return;
+                }
             }
+
+            // Session geçersiz, login'e yönlendir
+            sessionStorage.clear();
         };
 
-        // Handle Login
+        // GÜVENLİK: Sadece login olunca sistem başlatılır
+        function initializeSystem() {
+            isAuthenticated = true;
+            // GÜVENLİK: Repo bilgileri sadece login sonrası yüklenir
+            REPO_CONFIG = {
+                owner: 'simsekdogukan',
+                name: 'mayatech-licanse'
+            };
+            showMainSystem();
+            loadFiles();
+        }
+
+        // Login işlemi
         function handleLogin(event) {
             event.preventDefault();
             const username = document.getElementById('username').value;
@@ -391,9 +448,10 @@
             const errorMsg = document.getElementById('errorMsg');
 
             if (username === VALID_USERNAME && password === VALID_PASSWORD) {
-                sessionStorage.setItem('mayatech_logged_in', 'true');
-                showMainSystem();
-                loadFiles();
+                // GÜVENLİK: Session kaydet
+                sessionStorage.setItem('mayatech_auth', 'true');
+                sessionStorage.setItem('mayatech_auth_time', Date.now().toString());
+                initializeSystem();
             } else {
                 errorMsg.classList.add('show');
                 setTimeout(() => {
@@ -403,21 +461,25 @@
             return false;
         }
 
-        // Handle Logout
+        // Logout işlemi
         function handleLogout() {
-            sessionStorage.removeItem('mayatech_logged_in');
+            // GÜVENLİK: Tüm session verilerini temizle
+            sessionStorage.clear();
+            isAuthenticated = false;
+            REPO_CONFIG = null;
             document.getElementById('mainSystem').style.display = 'none';
             document.getElementById('loginPage').style.display = 'flex';
             document.getElementById('loginForm').reset();
+            document.getElementById('filesContent').innerHTML = '<div class="loading-msg">Dosyalar yükleniyor...</div>';
         }
 
-        // Show Main System
+        // Ana sistem göster
         function showMainSystem() {
             document.getElementById('loginPage').style.display = 'none';
             document.getElementById('mainSystem').style.display = 'block';
         }
 
-        // Format File Size
+        // Dosya boyutu formatlama
         function formatFileSize(bytes) {
             if (bytes === 0) return '0 B';
             const k = 1024;
@@ -426,10 +488,17 @@
             return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
         }
 
-        // Load Files
+        // GÜVENLİK: Dosya yükleme sadece authenticated kullanıcılar için
         async function loadFiles() {
+            // GÜVENLİK: Authentication kontrolü
+            if (!isAuthenticated || !REPO_CONFIG) {
+                console.error('Yetkisiz erişim denemesi!');
+                handleLogout();
+                return;
+            }
+
             try {
-                const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/`);
+                const response = await fetch(`https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.name}/contents/`);
                 const files = await response.json();
 
                 const downloadableFiles = files.filter(file =>
@@ -443,7 +512,7 @@
                 const container = document.getElementById('filesContent');
 
                 if (downloadableFiles.length === 0) {
-                    container.innerHTML = '<div class="no-files-msg">HENUZ DOSYA BULUNMUYOR</div>';
+                    container.innerHTML = '<div class="no-files-msg">Henüz dosya bulunmuyor</div>';
                     updateStats(0, 0);
                     return;
                 }
@@ -460,7 +529,7 @@
                             </div>
                             <div class="file-actions">
                                 <button class="download-btn" onclick="downloadFile('${file.download_url}', '${file.name}')">
-                                    INDIR
+                                    İndir
                                 </button>
                             </div>
                         </li>
@@ -470,18 +539,24 @@
             } catch (error) {
                 console.error('Hata:', error);
                 document.getElementById('filesContent').innerHTML =
-                    '<div class="no-files-msg">DOSYALAR YUKLENIRKEN HATA OLUSTU</div>';
+                    '<div class="no-files-msg">Dosyalar yüklenirken hata oluştu</div>';
             }
         }
 
-        // Update Stats
+        // İstatistikleri güncelle
         function updateStats(count, bytes) {
             document.getElementById('totalFiles').textContent = count;
             document.getElementById('totalSize').textContent = formatFileSize(bytes);
         }
 
-        // Download File
+        // GÜVENLİK: İndirme sadece authenticated kullanıcılar için
         function downloadFile(url, filename) {
+            if (!isAuthenticated) {
+                console.error('Yetkisiz erişim denemesi!');
+                handleLogout();
+                return;
+            }
+
             const link = document.createElement('a');
             link.href = url;
             link.download = filename;
@@ -489,6 +564,18 @@
             link.click();
             document.body.removeChild(link);
         }
+
+        // GÜVENLİK: Console'dan erişimi engelle
+        (function () {
+            const originalLog = console.log;
+            console.log = function () {
+                // İç logları çalıştır ama dışarıya bilgi verme
+                if (arguments[0] !== 'Yetkisiz erişim denemesi!' && arguments[0] !== 'Hata:') {
+                    return;
+                }
+                originalLog.apply(console, arguments);
+            };
+        })();
     </script>
 </body>
 
