@@ -1,54 +1,80 @@
-# Dosya İndirme Projesi
+# 🚀 Mayatech İndirme Merkezi
 
-Bu proje, kullanıcı bir URL'e gittiğinde otomatik olarak bir dosya indiren basit bir web sayfasıdır.
+Modern ve dinamik dosya indirme merkezi. GitHub reposuna yüklediğiniz her dosya otomatik olarak güzel bir arayüzde listelenir ve tek tıkla indirilebilir.
 
-## Özellikler
+## ✨ Özellikler
 
-- ✅ Sayfa açıldığında "Dosya İndiriliyor" mesajı gösterilir
-- ✅ Otomatik dosya indirme başlatılır
-- ✅ Modern ve şık tasarım
-- ✅ Vercel ile uyumlu
+- 🎨 **Ultra Modern Tasarım** - Glassmorphism, gradient renkler ve smooth animasyonlar
+- 🔄 **Otomatik Dosya Tespiti** - GitHub'a yüklenen dosyalar anında görünür
+- 📦 **Akıllı Dosya İkonları** - ZIP, RAR, EXE, PDF vb. her dosya tipi için özel icon
+- 📊 **Dosya Boyutu Gösterimi** - Otomatik formatlanmış dosya boyutları
+- 📱 **Responsive Tasarım** - Her cihazda mükemmel görünüm
+- ⚡ **GitHub API Entegrasyonu** - Gerçek zamanlı dosya listesi
 
-## Vercel'e Yükleme
+## 🎯 Nasıl Çalışır?
 
-### 1. Yöntem: Vercel CLI ile
+1. GitHub reposuna (`mayatech-licanse`) herhangi bir dosya yükleyin
+2. Sistem otomatik olarak dosyayı algılar
+3. Ana sayfada modern bir kart olarak görünür
+4. Kullanıcılar tek tıkla dosyayı indirebilir
+
+## 🚀 Kurulum ve Deployment
+
+### GitHub'a Yükleme
 
 ```bash
-# Vercel CLI'yi kurun (henüz kurmadıysanız)
-npm install -g vercel
-
 # Proje klasörüne gidin
 cd /Users/dogukansimsek/.gemini/antigravity/scratch/dosya-indirme-projesi
 
-# Deploy edin
-vercel
+# Remote ekleyin
+git remote add origin https://github.com/simsekdogukan/mayatech-licanse.git
+
+# Push yapın
+git branch -M main
+git push -u origin main
 ```
 
-### 2. Yöntem: GitHub üzerinden
-
-1. Bu klasörü bir GitHub repository'sine yükleyin
-2. Vercel hesabınıza giriş yapın (https://vercel.com)
-3. "New Project" butonuna tıklayın
-4. GitHub repository'nizi seçin ve import edin
-5. Deploy butonuna tıklayın
-
-### 3. Yöntem: Vercel Dashboard ile Drag & Drop
+### Vercel'e Deploy
 
 1. https://vercel.com adresine gidin
-2. "Add New..." > "Project" seçeneğine tıklayın
-3. Bu klasörün tamamını sürükleyip bırakın
-4. Deploy butonuna tıklayın
+2. "Import Project" seçeneğine tıklayın
+3. GitHub'dan `mayatech-licanse` reposunu seçin
+4. "Deploy" butonuna tıklayın
 
-## Dosya Yapısı
+✅ **Otomatik Deployment:** Bundan sonra GitHub'a her push yaptığınızda Vercel otomatik olarak güncelleyecek!
+
+## 📁 Dosya Yapısı
 
 ```
-dosya-indirme-projesi/
-├── index.html          # Ana sayfa
-├── dosya.zip          # İndirilecek dosya
-├── vercel.json        # Vercel yapılandırması
-└── README.md          # Bu dosya
+mayatech-licanse/
+├── index.html          # Ana indirme merkezi
+├── vercel.json         # Vercel yapılandırması
+├── README.md           # Bu dosya
+└── [dosyalarınız]      # İndirilebilir dosyalar
 ```
 
-## Not
+## 🎨 Desteklenen Dosya Tipleri
 
-İndirilen dosya: `Mayatech_Bilgisayar_Sorgu_Araci.zip`
+- 📦 Arşiv dosyaları: ZIP, RAR, 7Z
+- ⚙️ Uygulama dosyaları: EXE
+- 📄 Dokümanlar: PDF, DOC, DOCX, TXT
+- 📁 Diğer tüm dosya tipleri
+
+## 💡 İpuçları
+
+- **Yeni dosya eklemek için:** Sadece GitHub reposuna push edin, otomatik görünecek
+- **Dosya silmek için:** GitHub'dan dosyayı silin, sayfa otomatik güncellenecek
+- **Sistem dosyaları:** `.gitignore`, `README.md`, `index.html`, `vercel.json` listeye eklenmez
+
+## 🔧 Özelleştirme
+
+GitHub repo bilgilerini değiştirmek için `index.html` içindeki şu satırları düzenleyin:
+
+```javascript
+const REPO_OWNER = 'simsekdogukan';
+const REPO_NAME = 'mayatech-licanse';
+```
+
+---
+
+**Mayatech © 2025** | Modern, hızlı ve güvenilir dosya dağıtım sistemi
