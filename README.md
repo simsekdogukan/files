@@ -1,80 +1,97 @@
-# 🚀 Mayatech İndirme Merkezi
+# 🔒 Mayatech File Manager - Secure Backend Edition
 
-Modern ve dinamik dosya indirme merkezi. GitHub reposuna yüklediğiniz her dosya otomatik olarak güzel bir arayüzde listelenir ve tek tıkla indirilebilir.
+Vercel Serverless Functions ile güvenli backend API'ye sahip dosya yönetim sistemi.
 
-## ✨ Özellikler
+## 🛡️ Güvenlik Özellikleri
 
-- 🎨 **Ultra Modern Tasarım** - Glassmorphism, gradient renkler ve smooth animasyonlar
-- 🔄 **Otomatik Dosya Tespiti** - GitHub'a yüklenen dosyalar anında görünür
-- 📦 **Akıllı Dosya İkonları** - ZIP, RAR, EXE, PDF vb. her dosya tipi için özel icon
-- 📊 **Dosya Boyutu Gösterimi** - Otomatik formatlanmış dosya boyutları
-- 📱 **Responsive Tasarım** - Her cihazda mükemmel görünüm
-- ⚡ **GitHub API Entegrasyonu** - Gerçek zamanlı dosya listesi
+### ✅ Backend'de Korunan Veriler
+- **Şifreler:** Environment variables'da saklanır (F12 ile görülemez!)
+- **GitHub Token:** Backend'de güvenle tutuluyor
+- **Authentication:** Token tabanlı güvenli sistem
+- **Session Timeout:** 1 saatlik oturum süresi
 
-## 🎯 Nasıl Çalışır?
+### 🔐 API Endpoints
 
-1. GitHub reposuna (`mayatech-licanse`) herhangi bir dosya yükleyin
-2. Sistem otomatik olarak dosyayı algılar
-3. Ana sayfada modern bir kart olarak görünür
-4. Kullanıcılar tek tıkla dosyayı indirebilir
+#### POST /api/login
+Kullanıcı girişi yapar, güvenli token döner.
+
+#### GET /api/files
+Token ile korumalı dosya listesi döner.
 
 ## 🚀 Kurulum ve Deployment
 
-### GitHub'a Yükleme
+### 1. GitHub'a Yükle
 
 ```bash
-# Proje klasörüne gidin
 cd /Users/dogukansimsek/.gemini/antigravity/scratch/dosya-indirme-projesi
-
-# Remote ekleyin
-git remote add origin https://github.com/simsekdogukan/mayatech-licanse.git
-
-# Push yapın
-git branch -M main
-git push -u origin main
+git add -A
+git commit -m "Backend API güvenlik sistemi"
+git push origin main
 ```
 
-### Vercel'e Deploy
+### 2. Vercel'e Deploy Et
 
 1. https://vercel.com adresine gidin
-2. "Import Project" seçeneğine tıklayın
-3. GitHub'dan `mayatech-licanse` reposunu seçin
-4. "Deploy" butonuna tıklayın
+2. GitHub reposunu import edin: `simsekdogukan/mayatech-licanse`
+3. **Environment Variables** ekleyin:
 
-✅ **Otomatik Deployment:** Bundan sonra GitHub'a her push yaptığınızda Vercel otomatik olarak güncelleyecek!
+```
+MAYATECH_USERNAME=5999
+MAYATECH_PASSWORD=549476
+GITHUB_REPO_OWNER=simsekdogukan
+GITHUB_REPO_NAME=mayatech-licanse
+```
 
-## 📁 Dosya Yapısı
+4. Deploy butonuna tıklayın
+
+### 3. İlk Kullanım
+
+Deploy edildikten sonra:
+- Kimlik: `5999`
+- Şifre: `549476`
+
+## 📁 Proje Yapısı
 
 ```
 mayatech-licanse/
-├── index.html          # Ana indirme merkezi
+├── api/
+│   ├── login.js        # Backend login endpoint
+│   └── files.js        # Backend dosya listesi endpoint
+├── index.html          # Frontend (API'ye bağlı)
 ├── vercel.json         # Vercel yapılandırması
-├── README.md           # Bu dosya
-└── [dosyalarınız]      # İndirilebilir dosyalar
+├── .env.example        # Environment variables örneği
+└── README.md           # Bu dosya
 ```
 
-## 🎨 Desteklenen Dosya Tipleri
+## 🔬 Teknik Detaylar
 
-- 📦 Arşiv dosyaları: ZIP, RAR, 7Z
-- ⚙️ Uygulama dosyaları: EXE
-- 📄 Dokümanlar: PDF, DOC, DOCX, TXT
-- 📁 Diğer tüm dosya tipleri
+### Frontend
+- Vanilla JavaScript
+- Fetch API ile backend iletişimi
+- Token tabanlı authentication
+- Session yönetimi
 
-## 💡 İpuçları
+### Backend
+- Vercel Serverless Functions
+- Node.js runtime
+- Environment variables ile güvenlik
+- Token generation ve validation
 
-- **Yeni dosya eklemek için:** Sadece GitHub reposuna push edin, otomatik görünecek
-- **Dosya silmek için:** GitHub'dan dosyayı silin, sayfa otomatik güncellenecek
-- **Sistem dosyaları:** `.gitignore`, `README.md`, `index.html`, `vercel.json` listeye eklenmez
+## 🆚 Önceki Versiyondan Farklar
 
-## 🔧 Özelleştirme
+| Özellik | Önceki (Client-Only) | Yeni (Backend API) |
+|---------|---------------------|-------------------|
+| Şifreler | Kodda görünür (F12) | Backend'de gizli ✅ |
+| GitHub Token | Frontend'de | Backend'de ✅ |
+| Güvenlik | Zayıf | Güçlü ✅ |
+| F12 Koruması | Yok | Var ✅ |
 
-GitHub repo bilgilerini değiştirmek için `index.html` içindeki şu satırları düzenleyin:
+## 📝 Notlar
 
-```javascript
-const REPO_OWNER = 'simsekdogukan';
-const REPO_NAME = 'mayatech-licanse';
-```
+- Environment variables Vercel dashboard'dan ayarlanmalı
+- Local test için `.env.local` dosyası oluşturun
+- GitHub token opsiyonel (public repo için gerekli değil)
 
 ---
 
-**Mayatech © 2025** | Modern, hızlı ve güvenilir dosya dağıtım sistemi
+**© 2025 Mayatech** - Backend API ile güvenli dosya yönetim sistemi
